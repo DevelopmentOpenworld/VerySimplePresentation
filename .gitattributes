@@ -1,0 +1,20 @@
+* text=auto
+*.md text eol=lf
+*.py text eol=lf
+*.mjs text eol=lf
+*.js text eol=lf
+*.html text eol=lf
+*.css text eol=lf
+*.json text eol=lf
+*.pptx binary
+*.pdf binary
+*.png binary
+*.jpeg binary
+*.jpg binary
+*.ttf binary
+*.eot binary
+*.woff binary
+*.woff2 binary
+*.fntdata binary
+# Sealed release files are hashed byte for byte; a Windows clone must not turn them into CRLF.
+assets/fonts/*.txt text eol=lf

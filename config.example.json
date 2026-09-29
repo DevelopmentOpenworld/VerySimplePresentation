@@ -1,0 +1,11 @@
+{
+  "$comment": "Пример настроек: python apps/generator/server.py --config config.json. null — значение по умолчанию. Ключ модели сюда не пишется: он в переменной окружения из profiles/llm/models.json.",
+  "host": null,
+  "port": 8770,
+  "output": "var/generator",
+  "provider": null,
+  "node": null,
+  "node_modules": null,
+  "font_dirs": null,
+  "origins": null
+}

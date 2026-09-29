@@ -1,0 +1,21 @@
+{
+  "$id": "vsp/schemas/context_auditor.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["answers"],
+  "properties": {
+    "answers": {
+      "type": "array", "minItems": 10, "maxItems": 10,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["question", "answer", "reason"],
+        "properties": {
+          "question": {"type": "integer", "minimum": 1, "maximum": 11},
+          "answer": {"type": "string", "enum": ["yes", "no", "n/a"]},
+          "reason": {"type": "string", "maxLength": 240}
+        }
+      }
+    }
+  }
+}

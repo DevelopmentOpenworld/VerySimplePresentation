@@ -1,0 +1,463 @@
+{
+  "$id": "vsp/schemas/scene_marker.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "slides",
+    "content_style",
+    "brand_elements",
+    "stale_text",
+    "uncertain"
+  ],
+  "properties": {
+    "slides": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 12,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "slide",
+          "role",
+          "background",
+          "title",
+          "panels",
+          "no_text_zones",
+          "safe_text_area"
+        ],
+        "properties": {
+          "slide": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 200
+          },
+          "role": {
+            "type": "string",
+            "enum": [
+              "cover",
+              "section",
+              "content",
+              "agenda",
+              "disclaimer",
+              "closing",
+              "other"
+            ]
+          },
+          "background": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "kind",
+              "colour",
+              "tone"
+            ],
+            "properties": {
+              "kind": {
+                "type": "string",
+                "enum": [
+                  "plain",
+                  "gradient",
+                  "picture",
+                  "pattern"
+                ]
+              },
+              "colour": {
+                "type": "string",
+                "pattern": "^(#[0-9A-Fa-f]{6})?$"
+              },
+              "tone": {
+                "type": "string",
+                "enum": [
+                  "light",
+                  "dark"
+                ]
+              }
+            }
+          },
+          "title": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "present",
+              "box",
+              "text_colour",
+              "caps",
+              "on_band",
+              "band_colour",
+              "object_ids"
+            ],
+            "properties": {
+              "present": {
+                "type": "boolean"
+              },
+              "box": {
+                "type": "array",
+                "maxItems": 4,
+                "items": {
+                  "type": "number",
+                  "minimum": -5,
+                  "maximum": 105
+                }
+              },
+              "text_colour": {
+                "type": "string",
+                "pattern": "^(#[0-9A-Fa-f]{6})?$"
+              },
+              "caps": {
+                "type": "boolean"
+              },
+              "on_band": {
+                "type": "boolean"
+              },
+              "band_colour": {
+                "type": "string",
+                "pattern": "^(#[0-9A-Fa-f]{6})?$"
+              },
+              "object_ids": {
+                "type": "array",
+                "maxItems": 40,
+                "items": {
+                  "type": "string",
+                  "minLength": 2,
+                  "maxLength": 24
+                }
+              }
+            }
+          },
+          "panels": {
+            "type": "array",
+            "maxItems": 8,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "box",
+                "colour",
+                "text_colour"
+              ],
+              "properties": {
+                "box": {
+                  "type": "array",
+                  "maxItems": 4,
+                  "items": {
+                    "type": "number",
+                    "minimum": -5,
+                    "maximum": 105
+                  }
+                },
+                "colour": {
+                  "type": "string",
+                  "pattern": "^(#[0-9A-Fa-f]{6})?$"
+                },
+                "text_colour": {
+                  "type": "string",
+                  "pattern": "^(#[0-9A-Fa-f]{6})?$"
+                }
+              }
+            }
+          },
+          "no_text_zones": {
+            "type": "array",
+            "maxItems": 12,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "what",
+                "box",
+                "object_ids"
+              ],
+              "properties": {
+                "what": {
+                  "type": "string",
+                  "enum": [
+                    "logo",
+                    "decor_strip",
+                    "header_image",
+                    "photo_area",
+                    "illustration",
+                    "footer",
+                    "other"
+                  ]
+                },
+                "box": {
+                  "type": "array",
+                  "maxItems": 4,
+                  "items": {
+                    "type": "number",
+                    "minimum": -5,
+                    "maximum": 105
+                  }
+                },
+                "object_ids": {
+                  "type": "array",
+                  "maxItems": 40,
+                  "items": {
+                    "type": "string",
+                    "minLength": 2,
+                    "maxLength": 24
+                  }
+                }
+              }
+            }
+          },
+          "safe_text_area": {
+            "type": "array",
+            "maxItems": 4,
+            "items": {
+              "type": "number",
+              "minimum": -5,
+              "maximum": 105
+            }
+          }
+        }
+      }
+    },
+    "content_style": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "slides",
+        "background",
+        "title_zone",
+        "title_text_colour",
+        "title_caps",
+        "title_size",
+        "title_band",
+        "body_text_colour",
+        "accent_text_colour",
+        "body_area"
+      ],
+      "properties": {
+        "slides": {
+          "type": "array",
+          "maxItems": 12,
+          "items": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 200
+          }
+        },
+        "background": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "kind",
+            "colour",
+            "tone"
+          ],
+          "properties": {
+            "kind": {
+              "type": "string",
+              "enum": [
+                "plain",
+                "gradient",
+                "picture",
+                "pattern"
+              ]
+            },
+            "colour": {
+              "type": "string",
+              "pattern": "^(#[0-9A-Fa-f]{6})?$"
+            },
+            "tone": {
+              "type": "string",
+              "enum": [
+                "light",
+                "dark"
+              ]
+            }
+          }
+        },
+        "title_zone": {
+          "type": "array",
+          "maxItems": 4,
+          "items": {
+            "type": "number",
+            "minimum": -5,
+            "maximum": 105
+          }
+        },
+        "title_text_colour": {
+          "type": "string",
+          "pattern": "^(#[0-9A-Fa-f]{6})?$"
+        },
+        "title_caps": {
+          "type": "boolean"
+        },
+        "title_size": {
+          "type": "string",
+          "enum": [
+            "large",
+            "medium",
+            "small"
+          ]
+        },
+        "title_band": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "present",
+            "colour",
+            "box",
+            "object_ids"
+          ],
+          "properties": {
+            "present": {
+              "type": "boolean"
+            },
+            "colour": {
+              "type": "string",
+              "pattern": "^(#[0-9A-Fa-f]{6})?$"
+            },
+            "box": {
+              "type": "array",
+              "maxItems": 4,
+              "items": {
+                "type": "number",
+                "minimum": -5,
+                "maximum": 105
+              }
+            },
+            "object_ids": {
+              "type": "array",
+              "maxItems": 40,
+              "items": {
+                "type": "string",
+                "minLength": 2,
+                "maxLength": 24
+              }
+            }
+          }
+        },
+        "body_text_colour": {
+          "type": "string",
+          "pattern": "^(#[0-9A-Fa-f]{6})?$"
+        },
+        "accent_text_colour": {
+          "type": "string",
+          "pattern": "^(#[0-9A-Fa-f]{6})?$"
+        },
+        "body_area": {
+          "type": "array",
+          "maxItems": 4,
+          "items": {
+            "type": "number",
+            "minimum": -5,
+            "maximum": 105
+          }
+        }
+      }
+    },
+    "brand_elements": {
+      "type": "array",
+      "maxItems": 16,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "what",
+          "kind",
+          "box",
+          "slides",
+          "mandatory_on_content",
+          "object_ids"
+        ],
+        "properties": {
+          "what": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "logo",
+              "band",
+              "line",
+              "background",
+              "pattern",
+              "footer_text",
+              "illustration",
+              "shape"
+            ]
+          },
+          "box": {
+            "type": "array",
+            "maxItems": 4,
+            "items": {
+              "type": "number",
+              "minimum": -5,
+              "maximum": 105
+            }
+          },
+          "slides": {
+            "type": "array",
+            "maxItems": 12,
+            "items": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 200
+            }
+          },
+          "mandatory_on_content": {
+            "type": "boolean"
+          },
+          "object_ids": {
+            "type": "array",
+            "maxItems": 40,
+            "items": {
+              "type": "string",
+              "minLength": 2,
+              "maxLength": 24
+            }
+          }
+        }
+      }
+    },
+    "stale_text": {
+      "type": "array",
+      "maxItems": 12,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "text",
+          "slide",
+          "object_ids"
+        ],
+        "properties": {
+          "text": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160
+          },
+          "slide": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 200
+          },
+          "object_ids": {
+            "type": "array",
+            "maxItems": 40,
+            "items": {
+              "type": "string",
+              "minLength": 2,
+              "maxLength": 24
+            }
+          }
+        }
+      }
+    },
+    "uncertain": {
+      "type": "array",
+      "maxItems": 12,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 300
+      }
+    }
+  }
+}

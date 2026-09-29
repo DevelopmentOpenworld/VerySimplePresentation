@@ -1,0 +1,15 @@
+{
+  "version": "0.1.0",
+  "profile": "local-structured-mvp",
+  "planner": "structured-brief-v1",
+  "composition_mode": "reference_patterns",
+  "export_mode": "carrier",
+  "variants": ["sequence", "split", "columns"],
+  "variant_order": ["columns", "split", "sequence"],
+  "max_slides": 15,
+  "max_facts_per_section": 4,
+  "title_max_chars": 75,
+  "body_max_chars": 180,
+  "min_body_size_px": 19,
+  "line_height": 1.18
+}

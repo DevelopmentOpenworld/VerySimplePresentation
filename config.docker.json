@@ -1,0 +1,17 @@
+{
+  "$comment": "Настройки сервера в контейнере (Dockerfile): слушает все адреса внутри контейнера, порт публикует Docker. Каталоги шрифтов: открытые шрифты образа, полный набор Google Fonts в томе /fonts и шрифты Microsoft, если образ собран с MS_CORE_FONTS_EULA=accept (каталог без описи пропускается). Ключ модели — в переменной окружения VSP_LLM_API_KEY. origins — адреса, по которым пользователь открывает сервис (на сервере — его домен), запросы с других адресов отвергаются.",
+  "host": "0.0.0.0",
+  "port": 8770,
+  "output": "var/generator",
+  "provider": "openrouter",
+  "node": null,
+  "node_modules": null,
+  "font_dirs": [
+    "var/fonts",
+    "/fonts",
+    "/usr/share/fonts/truetype/msttcorefonts"
+  ],
+  "origins": [
+    "http://127.0.0.1:8770"
+  ]
+}

@@ -1,0 +1,27 @@
+VerySimplePresentation — генератор презентаций по образцу PPTX.
+Copyright (c) 2026 авторы VerySimplePresentation. Все права защищены.
+
+Код, промпты, схемы и профили этого репозитория не распространяются под открытой
+лицензией.
+
+Разрешается экспертам и организаторам конкурса просматривать репозиторий и запускать
+сервис, в том числе на своей инфраструктуре, чтобы оценить решение.
+
+Без письменного согласия правообладателя не разрешается копировать, изменять,
+распространять, сублицензировать или использовать код и его части в других
+продуктах и сервисах.
+
+Сторонние компоненты (шрифты, библиотеки, модели) остаются под своими лицензиями;
+тексты лицензий шрифтов приложены к шрифтам (assets/fonts/*-OFL.txt).
+
+---
+
+VerySimplePresentation, a presentation generator from a sample PPTX.
+Copyright (c) 2026 the authors of VerySimplePresentation. All rights reserved.
+
+This repository is not released under an open-source licence. The experts and
+organizers of the competition may view the repository and run the service, including
+on their own infrastructure, to evaluate the solution. Any other copying, modification,
+distribution, sublicensing or use of the code or its parts requires the written consent
+of the copyright holder. Third-party components (fonts, libraries, models) remain under
+their own licences.

@@ -1,0 +1,4 @@
+.git
+var/
+apps/generator/node_modules/
+config.json

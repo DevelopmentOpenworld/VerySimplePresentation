@@ -1,0 +1,25 @@
+{
+  "$id": "vsp/schemas/brief_analyst.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["title", "subtitle", "language", "facts"],
+  "properties": {
+    "title": {"type": "string", "minLength": 1, "maxLength": 75},
+    "subtitle": {"type": "string", "minLength": 1, "maxLength": 120},
+    "language": {"type": "string", "enum": ["ru", "en"]},
+    "facts": {
+      "type": "array", "minItems": 1, "maxItems": 60,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["id", "text", "quote"],
+        "properties": {
+          "id": {"type": "string", "pattern": "^f[0-9]{2,3}$"},
+          "text": {"type": "string", "minLength": 1, "maxLength": 180},
+          "numbers": {"type": "array", "maxItems": 12, "items": {"type": "string", "maxLength": 24}},
+          "quote": {"type": "string", "minLength": 1, "maxLength": 300}
+        }
+      }
+    }
+  }
+}

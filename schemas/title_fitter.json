@@ -1,0 +1,35 @@
+{
+  "$id": "vsp/schemas/title_fitter.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "titles"
+  ],
+  "properties": {
+    "titles": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 15,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "number",
+          "title"
+        ],
+        "properties": {
+          "number": {
+            "type": "integer",
+            "minimum": 2,
+            "maximum": 16
+          },
+          "title": {
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 120
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+node_modules/
+__pycache__/
+*.py[cod]
+var/
+/config.json
+.env
+.env.*
+*.key
+*.pem

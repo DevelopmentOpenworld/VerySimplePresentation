@@ -1,0 +1,138 @@
+{
+  "schema": "vsp.font-assets/1",
+  "faces": [
+    {
+      "family": "Roboto",
+      "weight": "regular",
+      "version": "Version 3.016; 2026",
+      "ttf": {
+        "file": "Roboto-Regular.ttf",
+        "sha256": "9f300202f482ad59f8b13bc3131a295744d14fd530fa3765a0a11ec87264d203"
+      },
+      "eot": {
+        "file": "Roboto-Regular.eot",
+        "sha256": "eaab98e7291bc0e19eb1e4bbd5b8aeb1dca7545ccbe0a56dce347b8b2f42d290"
+      },
+      "license": {
+        "file": "Roboto-OFL.txt",
+        "sha256": "061402327a96aadb0bfb694a960ed289ecd38d383e396243831ab81feb109c41",
+        "spdx": "OFL-1.1"
+      },
+      "upstream": "https://github.com/googlefonts/roboto-3-classic/releases/download/v3.016/Roboto_v3.016.zip"
+    },
+    {
+      "family": "Roboto",
+      "weight": "bold",
+      "version": "Version 3.016; 2026",
+      "ttf": {
+        "file": "Roboto-Bold.ttf",
+        "sha256": "44f13e570a8b3fc42240abfcb3d72fe298f3dd6a25db0c78d0c2495dbd0e9121"
+      },
+      "eot": {
+        "file": "Roboto-Bold.eot",
+        "sha256": "a00ed82d4cbf494dabc5df2a4f00a7a319abf406d7682defa90ba351b85a3026"
+      },
+      "license": {
+        "file": "Roboto-OFL.txt",
+        "sha256": "061402327a96aadb0bfb694a960ed289ecd38d383e396243831ab81feb109c41",
+        "spdx": "OFL-1.1"
+      },
+      "upstream": "https://github.com/googlefonts/roboto-3-classic/releases/download/v3.016/Roboto_v3.016.zip"
+    },
+    {
+      "family": "Open Sans",
+      "weight": "regular",
+      "version": "Version 3.003; ttfautohint (v1.8.4)",
+      "ttf": {
+        "file": "OpenSans-Regular.ttf",
+        "sha256": "c53aceea2dcf5b4098099c0c4d0a061d17e178a049317b42a422b1a9f7f8eb59"
+      },
+      "eot": {
+        "file": "OpenSans-Regular.eot",
+        "sha256": "4bc350d459d7fc18261ddbd0500231c6db0b15443dadb29a02c44e17821af1fc"
+      },
+      "license": {
+        "file": "OpenSans-OFL.txt",
+        "sha256": "01cd5ffb3a528c219a86e49a814c6c53bd8a69b9a3c305dd237074ba1c811af7",
+        "spdx": "OFL-1.1"
+      },
+      "upstream": "https://github.com/googlefonts/opensans/tree/bd7e37632246368c60fdcbd374dbf9bad11969b6/fonts/ttf"
+    },
+    {
+      "family": "Open Sans",
+      "weight": "bold",
+      "version": "Version 3.003; ttfautohint (v1.8.4)",
+      "ttf": {
+        "file": "OpenSans-Bold.ttf",
+        "sha256": "27da758f4dcac9a65abe914c13b463b42982b9909bc65713424099f4810bd1e6"
+      },
+      "eot": {
+        "file": "OpenSans-Bold.eot",
+        "sha256": "dcba40cd86b4644308641fd971d4cd088a62a850ded162af8ac7a2c07ad635a2"
+      },
+      "license": {
+        "file": "OpenSans-OFL.txt",
+        "sha256": "01cd5ffb3a528c219a86e49a814c6c53bd8a69b9a3c305dd237074ba1c811af7",
+        "spdx": "OFL-1.1"
+      },
+      "upstream": "https://github.com/googlefonts/opensans/tree/bd7e37632246368c60fdcbd374dbf9bad11969b6/fonts/ttf"
+    },
+    {
+      "family": "Montserrat",
+      "weight": "regular",
+      "version": "Version 9.000; ttfautohint (v1.8.4.7-5d5b)",
+      "ttf": {
+        "file": "Montserrat-Regular.ttf",
+        "sha256": "3e8abe50c44c82e2242e97d1ec8c0d385c4890cdc50447bcdb8605c81a38cfb2"
+      },
+      "eot": {
+        "file": "Montserrat-Regular.eot",
+        "sha256": "3ac08a1cdee52b3bbd19af984eb970a5b7d31c45ff2b6aec5b39f056250631a3"
+      },
+      "license": {
+        "file": "Montserrat-OFL.txt",
+        "sha256": "8b7141c03fa4f8d44e6345d5d4931709290f0f67875e452e95ac1fd3a027802e",
+        "spdx": "OFL-1.1"
+      },
+      "upstream": "https://github.com/JulietaUla/Montserrat/tree/555facfb2a18c72c3c0380f0d9c0f060453a9058/fonts/ttf"
+    },
+    {
+      "family": "Montserrat",
+      "weight": "bold",
+      "version": "Version 9.000; ttfautohint (v1.8.4.7-5d5b)",
+      "ttf": {
+        "file": "Montserrat-Bold.ttf",
+        "sha256": "bc6e854971cea46b463be6f9eef4d9cd52f51cfc1fc0dd90c9d3e6483dc0ec61"
+      },
+      "eot": {
+        "file": "Montserrat-Bold.eot",
+        "sha256": "abab94013bb5ee8db61eacdf4c0e35caad60cc51adf7cf5cfb6e1945f5f3be29"
+      },
+      "license": {
+        "file": "Montserrat-OFL.txt",
+        "sha256": "8b7141c03fa4f8d44e6345d5d4931709290f0f67875e452e95ac1fd3a027802e",
+        "spdx": "OFL-1.1"
+      },
+      "upstream": "https://github.com/JulietaUla/Montserrat/tree/555facfb2a18c72c3c0380f0d9c0f060453a9058/fonts/ttf"
+    },
+    {
+      "family": "Montserrat Light",
+      "weight": "regular",
+      "version": "Version 9.000; ttfautohint (v1.8.4.7-5d5b)",
+      "ttf": {
+        "file": "MontserratLight-Regular.ttf",
+        "sha256": "853de0dd715d6681f7038cf6cd53c1695b614657cbc57c8f542fe08d5b84e006"
+      },
+      "eot": {
+        "file": "MontserratLight-Regular.eot",
+        "sha256": "6108eda5ada690a8019435513ce3692372442463b165939b5723cb20556dabdb"
+      },
+      "license": {
+        "file": "Montserrat-OFL.txt",
+        "sha256": "8b7141c03fa4f8d44e6345d5d4931709290f0f67875e452e95ac1fd3a027802e",
+        "spdx": "OFL-1.1"
+      },
+      "upstream": "https://github.com/JulietaUla/Montserrat/tree/555facfb2a18c72c3c0380f0d9c0f060453a9058/fonts/ttf"
+    }
+  ]
+}

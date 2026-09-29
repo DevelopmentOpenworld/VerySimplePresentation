@@ -1,0 +1,43 @@
+{
+  "$id": "vsp/schemas/image_auditor.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "answers"
+  ],
+  "properties": {
+    "answers": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 12,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "picture",
+          "answer",
+          "reason"
+        ],
+        "properties": {
+          "picture": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 12
+          },
+          "answer": {
+            "type": "string",
+            "enum": [
+              "yes",
+              "no",
+              "n/a"
+            ]
+          },
+          "reason": {
+            "type": "string",
+            "maxLength": 240
+          }
+        }
+      }
+    }
+  }
+}

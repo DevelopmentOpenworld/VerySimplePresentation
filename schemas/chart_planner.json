@@ -1,0 +1,160 @@
+{
+  "$id": "vsp/schemas/chart_planner.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "charts",
+    "metrics",
+    "processes"
+  ],
+  "properties": {
+    "charts": {
+      "type": "array",
+      "maxItems": 15,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "slide",
+          "kind",
+          "unit",
+          "value_label",
+          "categories",
+          "series",
+          "fact_ids"
+        ],
+        "properties": {
+          "slide": {
+            "type": "string",
+            "pattern": "^s[0-9]{2}$"
+          },
+          "kind": {
+            "type": "string",
+            "enum": [
+              "bar",
+              "line",
+              "pie"
+            ]
+          },
+          "unit": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 20
+          },
+          "value_label": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 60
+          },
+          "categories": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 8,
+            "items": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 40
+            }
+          },
+          "series": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 8,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "name",
+                "values"
+              ],
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 40
+                },
+                "values": {
+                  "type": "array",
+                  "minItems": 1,
+                  "maxItems": 8,
+                  "items": {
+                    "type": "number",
+                    "minimum": 0
+                  }
+                }
+              }
+            }
+          },
+          "fact_ids": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 6,
+            "items": {
+              "type": "string",
+              "pattern": "^f[0-9]{2,3}$"
+            }
+          }
+        }
+      }
+    },
+    "metrics": {
+      "type": "array",
+      "maxItems": 15,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "slide",
+          "items"
+        ],
+        "properties": {
+          "slide": {
+            "type": "string",
+            "pattern": "^s[0-9]{2}$"
+          },
+          "items": {
+            "type": "array",
+            "minItems": 2,
+            "maxItems": 4,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "fact_id",
+                "value"
+              ],
+              "properties": {
+                "fact_id": {
+                  "type": "string",
+                  "pattern": "^f[0-9]{2,3}$"
+                },
+                "value": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 24
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "processes": {
+      "type": "array",
+      "maxItems": 15,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "slide"
+        ],
+        "properties": {
+          "slide": {
+            "type": "string",
+            "pattern": "^s[0-9]{2}$"
+          }
+        }
+      }
+    }
+  }
+}

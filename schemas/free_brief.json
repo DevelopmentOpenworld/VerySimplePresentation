@@ -1,0 +1,20 @@
+{
+  "$id": "vsp/schemas/free_brief.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema", "text"],
+  "properties": {
+    "schema": {"type": "string", "enum": ["vsp.free-brief/1"]},
+    "text": {"type": "string", "minLength": 20, "maxLength": 20000},
+    "purpose": {"type": "string", "enum": ["feature", "product", "project", "initiative", "other"]},
+    "audience": {"type": "string", "maxLength": 300},
+    "consumer": {"type": "string", "maxLength": 300},
+    "wishes": {"type": "string", "maxLength": 1000},
+    "slides": {"type": "integer", "minimum": 3, "maximum": 15},
+    "talk_minutes": {"type": "integer", "minimum": 1, "maximum": 60},
+    "language": {"type": "string", "enum": ["ru", "en"]},
+    "dash": {"type": "string", "enum": ["en", "em"]},
+    "disclosure": {"type": "string", "maxLength": 180},
+    "source": {"type": "string", "maxLength": 300}
+  }
+}

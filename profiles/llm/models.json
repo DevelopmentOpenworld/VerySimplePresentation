@@ -1,0 +1,48 @@
+{
+  "schema": "vsp.models/1",
+  "default_provider": "replay",
+  "providers": {
+    "openrouter": {
+      "url": "https://openrouter.ai/api/v1/chat/completions",
+      "model": "qwen/qwen3.8-27b",
+      "reasoning_effort": "none",
+      "response_format": "json_schema",
+      "hedge_seconds": {
+        "brief_analyst": 120,
+        "outline_planner": 60,
+        "slide_writer": 20,
+        "chart_planner": 45,
+        "context_auditor": 40,
+        "title_fitter": 25,
+        "title_writer": 20,
+        "image_auditor": 20,
+        "icon_picker": 20,
+        "speaker_notes": 60,
+        "speaker_notes_sources": 60
+      },
+      "agent_notes": {
+        "brief_analyst": "Жёсткий предел: не больше {facts_max} фактов (slides × facts_per_slide_max). Бери самые важные утверждения брифа; ответ с большим числом фактов отклоняется целиком. Цитата — одно предложение брифа."
+      },
+      "key_env": "VSP_LLM_API_KEY",
+      "provider": {
+        "order": [
+          "parasail",
+          "coreweave",
+          "deepinfra"
+        ],
+        "allow_fallbacks": false,
+        "quantizations": [
+          "bf16",
+          "fp8"
+        ],
+        "data_collection": "deny",
+        "require_parameters": true
+      },
+      "timeout_seconds": 90,
+      "retries": 1
+    },
+    "replay": {
+      "store": "tests/fixtures/llm"
+    }
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "$id": "vsp/schemas/icon_picker.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "slides"
+  ],
+  "properties": {
+    "slides": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 15,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "slide",
+          "icons"
+        ],
+        "properties": {
+          "slide": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 40
+          },
+          "icons": {
+            "type": "array",
+            "maxItems": 4,
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "item",
+                "icon"
+              ],
+              "properties": {
+                "item": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 4
+                },
+                "icon": {
+                  "type": "string",
+                  "pattern": "^[0-9a-f]{12}$"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

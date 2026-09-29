@@ -1,0 +1,15 @@
+{
+  "$id": "vsp/schemas/title_writer.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "title"
+  ],
+  "properties": {
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 75
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "$id": "vsp/schemas/content_writer.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["facts"],
+  "properties": {
+    "facts": {
+      "type": "array", "minItems": 0, "maxItems": 60,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["text"],
+        "properties": {
+          "text": {"type": "string", "minLength": 1, "maxLength": 180}
+        }
+      }
+    }
+  }
+}
